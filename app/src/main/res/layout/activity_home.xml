@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    tools:context=".Home">
+
+    <!-- Existing code for other views -->
+
+    <Button
+        android:id="@+id/btn_todo"
+        android:layout_width="258dp"
+        android:layout_height="70dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/light_blue"
+        android:drawableRight="@mipmap/ic_todo_foreground"
+        android:fontFamily="sans-serif-black"
+        android:paddingStart="20dp"
+        android:radius="200dp"
+        android:text="To Do"
+        android:textAlignment="viewStart"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_trello"
+        app:layout_constraintVertical_bias="0.104" />
+
+    <Button
+        android:id="@+id/btn_trello"
+        android:layout_width="258dp"
+        android:layout_height="70dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/light_blue"
+        android:drawableRight="@mipmap/ic_trello_foreground"
+        android:fontFamily="sans-serif-black"
+        android:paddingStart="20dp"
+        android:radius="200dp"
+        android:text="Trello"
+        android:textAlignment="viewStart"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_notebook"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <Button
+        android:id="@+id/btn_notebook"
+        android:layout_width="258dp"
+        android:layout_height="70dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/light_blue"
+        android:drawableRight="@mipmap/ic_notebook_foreground"
+        android:fontFamily="sans-serif-black"
+        android:paddingStart="20dp"
+        android:radius="200dp"
+        android:text="Notebook"
+        android:textAlignment="viewStart"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.216" />
+
+    <Button
+        android:id="@+id/btn_calendar"
+        android:layout_width="258dp"
+        android:layout_height="70dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/light_blue"
+        android:drawableRight="@mipmap/ic_calendar_foreground"
+        android:fontFamily="sans-serif-black"
+        android:paddingStart="20dp"
+        android:radius="200dp"
+        android:text="Calendar"
+        android:textAlignment="viewStart"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_todo"
+        app:layout_constraintVertical_bias="0.152" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="324dp"
+        android:layout_height="67dp"
+        android:text="Infinity Flow"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885" />
+
+    <ImageView
+        android:id="@+id/btn_nav"
+        android:layout_width="77dp"
+        android:layout_height="79dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024"
+        app:srcCompat="@mipmap/ic_hamburger_menu_foreground" />
+
+    <!-- Box layout -->
+
+    <ImageView
+        android:id="@+id/btn_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/ic_profile_foreground" />
+
+    <LinearLayout
+        android:id="@+id/box_layout"
+        android:layout_width="293dp"
+        android:layout_height="445dp"
+        android:background="@drawable/rounded_menu"
+        android:visibility="gone"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_nav">
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@android:color/transparent"
+            android:text="Home"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnAbout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.96" />
+
+        <Button
+            android:id="@+id/btnAbout"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginBottom="4dp"
+            android:background="@android:color/transparent"
+            android:text="About"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnSettings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginBottom="4dp"
+            android:background="@android:color/transparent"
+            android:text="Settings"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnContact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <Button
+            android:id="@+id/btnContact"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginBottom="280dp"
+            android:background="@android:color/transparent"
+            android:text="Contact"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
